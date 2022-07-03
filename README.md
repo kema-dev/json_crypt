@@ -76,8 +76,6 @@ python src/json_encrypt.py
 <!-- ROADMAP -->
 ## Roadmap
 
-* To be decided
-
 See the [open issues](https://github.com/kema-dev/ft_transcendence/issues) for a full list of proposed features (and known issues).
 
 Proper roadmap is available [here](roadmap.md).
