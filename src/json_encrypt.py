@@ -15,7 +15,7 @@ def get_infile_path():
         print('Getting input file path...')
     pop = tk.Tk()
     pop.withdraw()
-    print('Choose your json file')
+    print('Choose the json file you want to encrypt / decrypt')
     try:
         fn = tk.filedialog.askopenfilename()
     except:
@@ -37,7 +37,7 @@ def get_outfile_path(infile, mode):
         print('Getting output file path...')
     pop = tk.Tk()
     pop.withdraw()
-    print('Choose your json file')
+    print('Choose your destination folder')
     try:
         dn = tk.filedialog.askdirectory()
     except:
@@ -63,7 +63,7 @@ def get_key():
     while not re.match(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=^[a-zA-Z0-9!@#$%^&*]*$).{16,32}$', key):
         key = gp.getpass(
             """Time to choose you key, it must:
-- be at least between 16 and 32 characters long
+- be between 16 and 32 characters long
 - contain at least one number
 - contain at least one lowercase letter
 - contain at least one uppercase letter
@@ -127,6 +127,8 @@ def encrypt():
         key = get_key()
     data = get_data(in_name)
     data = encrypt_json(data, key)
+    if not Path(outfile).parent.is_dir():
+        os.mkdir(Path(outfile).parent)
     export_to_file(data, outfile)
 
 
@@ -183,17 +185,21 @@ def main():
     """
     Main function.
     """
-    if len(sys.argv) > 1:
-        if sys.argv[1] == '-d':
+    global short
+    global debug
+    short = ''
+    debug = ''
+    for i in range(len(sys.argv)):
+        if sys.argv[i] == '--debug':
             debug = True
             print('Debug mode enabled')
-        elif sys.argv[1] == '-e':
+        elif sys.argv[i] == '-e':
             short = 'e'
             print('Short mode enabled (encryption)')
-        elif sys.argv[1] == '-d':
+        elif sys.argv[i] == '-d':
             short = 'd'
             print('Short mode enabled (decryption)')
-        elif sys.argv[1] == '-t':
+        elif sys.argv[i] == '-t':
             short = 't'
             print('Short mode enabled (encryption + decryption)')
     if short != '':
@@ -259,7 +265,7 @@ def decrypt_json(data, key):
 
 
 if __name__ == '__main__':
-    PARENT_FOLDER = str(Path(__file__).parent.parent.absolute()).replace('\\', '/')
+    PARENT_FOLDER = str(Path(__file__).parent.parent.absolute())
     SAMPLE_FOLDER = PARENT_FOLDER + '/sample/'
     SAMPLE_FILE = 'bitwarden_export_20220702203804.json'
     SAMPLE_NAME = ''.join(SAMPLE_FILE.split('.')[:-1])
@@ -270,8 +276,6 @@ if __name__ == '__main__':
     SHORT_D_INFILE = SHORT_E_OUTFILE
     SHORT_D_OUTFILE = SHORT_D_INFILE.replace(SAMPLE_EXT, '') + '_decrypted' + SAMPLE_EXT
     SHORT_D_KEY = '#Password123%123456'.ljust(32)
-    debug = False
-    short = 't'
     main()
     print('Done')
     exit()
