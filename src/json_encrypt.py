@@ -242,9 +242,9 @@ def encrypt_json(data, key):
     if debug == True:
         print('Encrypting json data...')
     cipher_proc = aes(key)
-    pattern = r'(:\s)((?![\[{]).+?((?=,[\n\r\f\v])|(?=[\n\r\f\v])))'
+    pattern = r'(:(\s?)*)(\".*?\"|.*?(?=[,\[\]{}\s]))'
     data = data.decode('utf-8')
-    data = re.sub(pattern, lambda m: m.group(1) + encrypt_string(m.group(2), cipher_proc), data)
+    data = re.sub(pattern, lambda m: m.group(1) + encrypt_string(m.group(3), cipher_proc), data)
     if debug == True:
         print('Json data encrypted')
     return data
@@ -256,9 +256,9 @@ def decrypt_json(data, key):
     if debug == True:
         print('Decrypting json data...')
     cipher_proc = aes(key)
-    pattern = r'(:\s)((?![\[{]).+?((?=,[\n\r\f\v])|(?=[\n\r\f\v])))'
+    pattern = r'(:(\s?)*)(\".*?\"|.*?(?=[,\[\]{}\s]))'
     data = data.decode('utf-8')
-    data = re.sub(pattern, lambda m: m.group(1) + decrypt_string(m.group(2), cipher_proc), data)
+    data = re.sub(pattern, lambda m: m.group(1) + decrypt_string(m.group(3), cipher_proc), data)
     if debug == True:
         print('Json data decrypted')
     return data
