@@ -40,7 +40,7 @@
 
 * <a href="https://www.python.org/" target="_blank" title="Python's website">Python</a>
 * <a href="https://pypi.org/project/pycryptodome/" target="_blank" title="pycryptodome's page">pycryptodome</a>
-* <a href="https://regex101.com/r/NBCdDv/1" target="_blank" title="regex demo">regex (demo)</a>
+* <a href="https://regex101.com/r/Oc9oYx/1" target="_blank" title="regex demo">regex (demo)</a>
 
 <!-- GETTING STARTED -->
 ## Getting Started

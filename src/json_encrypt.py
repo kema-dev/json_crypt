@@ -142,7 +142,13 @@ def encrypt_string(string, cipher_proc):
         if debug == True:
             print('String is None, skipping')
         return ''
-    encrypted = cipher_proc.encrypt(string)
+    try:
+        encrypted = cipher_proc.encrypt(string)
+    except Exception as e:
+        if debug == True:
+            print(e)
+        print('Fail! Unknow error. Enable debug mode and try again to see the error message')
+        exit()
     if debug == True:
         print('String encrypted')
     return encrypted.decode('utf-8')
@@ -175,7 +181,13 @@ def decrypt_string(string, cipher_proc):
         if debug == True:
             print('String is None, skipping')
         return ''
-    decrypted = cipher_proc.decrypt(string)
+    try:
+        decrypted = cipher_proc.decrypt(string)
+    except Exception as e:
+        if debug == True:
+            print(e)
+        print('Fail! This is most likely to be caused by a wrong key. Enable debug mode and try again to see the error message')
+        exit()
     if debug == True:
         print('String decrypted')
     return decrypted
