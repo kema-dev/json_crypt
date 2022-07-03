@@ -32,12 +32,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<div align="center" style="height:200px; margin-bottom:10%">
-  <a>
-    <img src="assets/docker_moby.png" alt="Docker logo">
-  </a>
-</div>
 <!-- TODO Put images / gifs from the project here -->
 
 **json_crypt** is a simple tool to encrypt and decrypt the values of JSON files, thus keeping the ability to search for specific key in the file and decrypt its value on-the-fly. It uses AES-256 in CBC mode to encrypt the data, with a given password as the key.
@@ -81,8 +75,6 @@ python src/json_encrypt.py
 
 <!-- ROADMAP -->
 ## Roadmap
-
-* To be decided
 
 See the [open issues](https://github.com/kema-dev/ft_transcendence/issues) for a full list of proposed features (and known issues).
 
