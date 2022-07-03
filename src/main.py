@@ -113,19 +113,6 @@ def export_to_file(data, file):
         print('Data exported to ' + file)
 
 
-def decrypt_data(data, key):
-    """
-    Encrypt the data.
-    """
-    if debug == True:
-        print('Decrypting data...')
-    cipher_proc = aes(key)
-    recursive_decrypt(data, cipher_proc)
-    if debug == True:
-        print('Data decrypted')
-    return data
-
-
 def encrypt():
     """
     Encrypt the data.
@@ -143,6 +130,22 @@ def encrypt():
     export_to_file(data, outfile)
 
 
+def encrypt_string(string, cipher_proc):
+    """
+    Encrypt a string.
+    """
+    if debug == True:
+        print('Encrypting string...')
+    if string is None or string == '':
+        if debug == True:
+            print('String is None, skipping')
+        return ''
+    encrypted = cipher_proc.encrypt(string)
+    if debug == True:
+        print('String encrypted')
+    return encrypted.decode('utf-8')
+
+
 def decrypt():
     """
     Decrypt the data.
@@ -158,22 +161,6 @@ def decrypt():
     data = get_data(in_name)
     data = decrypt_json(data, key)
     export_to_file(data, outfile)
-
-
-def encrypt_string(string, cipher_proc):
-    """
-    Encrypt a string.
-    """
-    if debug == True:
-        print('Encrypting string...')
-    if string is None or string == '':
-        if debug == True:
-            print('String is None, skipping')
-        return ''
-    encrypted = cipher_proc.encrypt(string)
-    if debug == True:
-        print('String encrypted')
-    return encrypted.decode('utf-8')
 
 
 def decrypt_string(string, cipher_proc):
@@ -200,6 +187,15 @@ def main():
         if sys.argv[1] == '-d':
             debug = True
             print('Debug mode enabled')
+        elif sys.argv[1] == '-e':
+            short = 'e'
+            print('Short mode enabled (encryption)')
+        elif sys.argv[1] == '-d':
+            short = 'd'
+            print('Short mode enabled (decryption)')
+        elif sys.argv[1] == '-t':
+            short = 't'
+            print('Short mode enabled (encryption + decryption)')
     if short != '':
         choice = short
     else:
