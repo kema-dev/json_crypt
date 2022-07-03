@@ -1,6 +1,8 @@
 # roadmap
 
 * Maybe read / write in steps instead of one big I/O operation
+* Handle bad passwords for decryption
+* Handle one line json files
 * Make an api that can be used by other programs, and create a documentation for it. Permit to get the value of a given key directly, using a regex
 * Make a key exchange protocol, so that the key can be shared between the two programs and thus do not need to provide plaintext key within each request
 * Detect input file encoding / make an option to specify it for input and output files
