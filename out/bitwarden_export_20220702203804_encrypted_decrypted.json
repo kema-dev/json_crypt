@@ -1,0 +1,195 @@
+{
+  "encrypted": false,
+  "folders": [
+    {
+      "id": "0d4e7f67-bc96-4a7d-9740-aec400cc2ae9",
+      "name": "folder0"
+    },
+    {
+      "id": "818a5d64-4d7f-44cc-a8d1-aec400cc2725",
+      "name": "folder1"
+    }
+  ],
+  "items": [
+    {
+      "id": "485a4a2f-efaa-42a7-875d-aec4014f97c7",
+      "organizationId": null,
+      "folderId": null,
+      "type": 1,
+      "reprompt": 0,
+      "name": "âh œ d'âÇÔrd",
+      "notes": null,
+      "favorite": false,
+      "fields": [
+        {
+          "name": "linked",
+          "value": null,
+          "type": 3,
+          "linkedId": 100
+        },
+        {
+          "name": "hidden",
+          "value": "value",
+          "type": 1,
+          "linkedId": null
+        },
+        {
+          "name": "boolean",
+          "value": "true",
+          "type": 2,
+          "linkedId": null
+        },
+        {
+          "name": "text",
+          "value": "value",
+          "type": 0,
+          "linkedId": null
+        }
+      ],
+      "login": {
+        "username": "âh œ d'âÇÔrd",
+        "password": "âh œ d'âÇÔrd",
+        "totp": null
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "beedddd6-64c9-4a14-9e65-aec4014e8bb0",
+      "organizationId": null,
+      "folderId": null,
+      "type": 4,
+      "reprompt": 0,
+      "name": "Identity_name",
+      "notes": "Je suis français",
+      "favorite": false,
+      "identity": {
+        "title": "Mr",
+        "firstName": "John",
+        "middleName": "Middle",
+        "lastName": "Doe",
+        "address1": "My address",
+        "address2": "is awesome",
+        "address3": "and i like 42",
+        "city": "Paris",
+        "state": "Île de France",
+        "postalCode": "75042",
+        "country": "France",
+        "company": "the ripper",
+        "email": "mail@example.tld",
+        "phone": "+33622334455",
+        "ssn": "12394876697834126",
+        "username": "john",
+        "passportNumber": "431287545671328",
+        "licenseNumber": "276345823465"
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "7d7726a7-8e7e-43a7-905c-aec4014dd18d",
+      "organizationId": null,
+      "folderId": "818a5d64-4d7f-44cc-a8d1-aec400cc2725",
+      "type": 3,
+      "reprompt": 1,
+      "name": "name_card",
+      "notes": "Note for this awesome Visa card",
+      "favorite": false,
+      "card": {
+        "cardholderName": "cardholder_name",
+        "brand": "Visa",
+        "number": "0000111122223333",
+        "expMonth": "8",
+        "expYear": "4242",
+        "code": "042"
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "46fb95aa-8129-4cf1-b05b-aec400caaaa6",
+      "organizationId": null,
+      "folderId": "0d4e7f67-bc96-4a7d-9740-aec400cc2ae9",
+      "type": 1,
+      "reprompt": 0,
+      "name": "name0",
+      "notes": "Note0",
+      "favorite": true,
+      "login": {
+        "uris": [
+          {
+            "match": 3,
+            "uri": "https://domain.tld"
+          },
+          {
+            "match": 4,
+            "uri": "/^(https?\\:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})(\\/[\\w]*)*$/"
+          },
+          {
+            "match": 2,
+            "uri": "app.tld"
+          }
+        ],
+        "username": "username0",
+        "password": "password1",
+        "totp": "otpauth://totp/Test:me?secret=JBSWY3DPEHPK3PXP&algorithm=sha256&digits=8&period=60"
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "26ed0c50-e569-4a3f-927a-aec400cc62da",
+      "organizationId": null,
+      "folderId": "818a5d64-4d7f-44cc-a8d1-aec400cc2725",
+      "type": 1,
+      "reprompt": 0,
+      "name": "name1",
+      "notes": "Note1",
+      "favorite": false,
+      "login": {
+        "uris": [
+          {
+            "match": 1,
+            "uri": "192.168.0.1"
+          }
+        ],
+        "username": "username1",
+        "password": null,
+        "totp": null
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "7f0adbb0-5426-4951-bf5c-aec400caec49",
+      "organizationId": null,
+      "folderId": null,
+      "type": 1,
+      "reprompt": 0,
+      "name": "name2",
+      "notes": "note2",
+      "favorite": true,
+      "login": {
+        "uris": [
+          {
+            "match": 3,
+            "uri": "http://www.domain.sub.tld"
+          }
+        ],
+        "username": "user.name@2",
+        "password": "xm;6xvYJWCM3Wzp1",
+        "totp": null
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "06b98121-9704-4738-8697-aec4014f16e7",
+      "organizationId": null,
+      "folderId": null,
+      "type": 2,
+      "reprompt": 1,
+      "name": "Note is secure",
+      "notes": "This is a secure note, testing encoding\nâh œ d'âÇÔrd",
+      "favorite": false,
+      "secureNote": {
+        "type": 0
+      },
+      "collectionIds": null
+    }
+  ]
+}
