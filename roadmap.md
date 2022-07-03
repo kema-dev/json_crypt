@@ -1,6 +1,7 @@
 # roadmap
 
 * Detect input file encoding / make an option to specify it for input and output files
+* Maybe read / write in steps instead of one big I/O operation
 * Make an api that can be used by other programs, and create a documentation for it
 * Make a proper readme with examples, pros and cons
 * Make it usable on different type of files (csv, password manager export, ...)
