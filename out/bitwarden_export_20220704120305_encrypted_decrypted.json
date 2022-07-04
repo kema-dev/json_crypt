@@ -184,7 +184,7 @@
       "type": 2,
       "reprompt": 1,
       "name": "Note is secure",
-      "notes": "This is a secure note, testing encoding\nâh œ d'âÇÔrd",
+      "notes": "This is a secure note, testing encoding\nâh œ d'âÇÔrd, je peux mettre des \"quotes\"",
       "favorite": false,
       "secureNote": {
         "type": 0

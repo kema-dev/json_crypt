@@ -254,7 +254,7 @@ def encrypt_json(data, key):
     if debug == True:
         print('Encrypting json data...')
     cipher_proc = aes(key)
-    pattern = r'(:(\s?)*)(\".*?\"|.*?(?=[,\[\]{}\s]))'
+    pattern = r'(:(\s?)*)(\".*?(?<!\\)\"|.*?(?=[,\[\]{}\s]))'
     data = data.decode('utf-8')
     data = re.sub(pattern, lambda m: m.group(1) + encrypt_string(m.group(3), cipher_proc), data)
     if debug == True:
@@ -268,7 +268,7 @@ def decrypt_json(data, key):
     if debug == True:
         print('Decrypting json data...')
     cipher_proc = aes(key)
-    pattern = r'(:(\s?)*)(\".*?\"|.*?(?=[,\[\]{}\s]))'
+    pattern = r'(:(\s?)*)(\".*?(?<!\\)\"|.*?(?=[,\[\]{}\s]))'
     data = data.decode('utf-8')
     data = re.sub(pattern, lambda m: m.group(1) + decrypt_string(m.group(3), cipher_proc), data)
     if debug == True:
@@ -279,7 +279,7 @@ def decrypt_json(data, key):
 if __name__ == '__main__':
     PARENT_FOLDER = str(Path(__file__).parent.parent.absolute())
     SAMPLE_FOLDER = PARENT_FOLDER + '/sample/'
-    SAMPLE_FILE = 'bitwarden_export_20220702203804.json'
+    SAMPLE_FILE = 'bitwarden_export_20220704120305.json'
     SAMPLE_NAME = ''.join(SAMPLE_FILE.split('.')[:-1])
     SAMPLE_EXT = '.' + SAMPLE_FILE.split('.')[-1]
     SHORT_E_INFILE = SAMPLE_FOLDER + SAMPLE_FILE
