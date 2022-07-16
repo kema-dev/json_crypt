@@ -76,9 +76,9 @@ python src/json_encrypt.py
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/kema-dev/ft_transcendence/issues) for a full list of proposed features (and known issues).
+Just found [Mozilla's work](https://github.com/mozilla/sops) that does pretty much the same job, thus I don't plan to work on this project anymore.
 
-Proper roadmap is available [here](roadmap.md).
+Initial roadmap is available [here](roadmap.md).
 
 <!-- CONTACT -->
 ## Contact
