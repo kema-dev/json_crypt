@@ -1,5 +1,11 @@
 <div id="top"></div>
 <!-- PROJECT LOGO -->
+<p align=center>
+  <img alt="Project's status" src="https://img.shields.io/badge/Status-Finished-brightgreen">
+  <img alt="Project's primary language" src="https://img.shields.io/badge/Language-Python-blue">
+  <img alt="Project's focus" src="https://img.shields.io/badge/Focus-Data%20encryption-blue">
+</p>
+
 <br />
 <div align="center">
     <img src="assets/logo_json_crypt.png" alt="Docker logo" style="height:30vh">
