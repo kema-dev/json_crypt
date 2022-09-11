@@ -8,7 +8,7 @@
 
 <br />
 <div align="center">
-    <img src="assets/logo_json_crypt.png" alt="Docker logo" style="height:30vh">
+    <img src="assets/json.png" alt="Docker logo" style="height:30vh">
 </div>
 
 <!-- ABOUT THE PROJECT -->
