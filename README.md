@@ -15,7 +15,7 @@
 ## About The Project
 <!-- TODO Put images / gifs from the project here -->
 
-**json_crypt** is a simple tool to encrypt and decrypt the values of JSON files, thus keeping the ability to search for specific key in the file and decrypt its value on-the-fly. It uses AES-256 in CBC mode to encrypt the data, with a given password as the key.
+**json_crypt** is a simple JSON encryption / decryption tool, only encryption values thus keeping the ability to search for specific key in the file and decrypt its value on-the-fly. It uses AES-256 in CBC mode to encrypt the data, with a given password as the key.
 
 ### Built With
 
